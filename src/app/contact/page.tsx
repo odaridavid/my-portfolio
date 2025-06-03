@@ -1,6 +1,6 @@
 'use client';
 
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaTwitter } from 'react-icons/fa';
 
 export default function ContactPage() {
   return (
@@ -18,6 +18,14 @@ export default function ContactPage() {
           className="hover:text-indigo-500 transition"
         >
           <FaGithub />
+        </a>
+        <a
+          href="https://x.com/_davidodari"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-indigo-500 transition"
+        >
+          <FaTwitter />
         </a>
         <a
           href="https://linkedin.com/in/david-odari-kiribwa-155613111"
