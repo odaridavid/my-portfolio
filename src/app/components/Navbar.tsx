@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { useState } from 'react';
 import ThemeToggle from './ThemeToggle';
 
-
 const links = [
   { href: '/', label: 'Home' },
   { href: '/projects', label: 'Projects' },
@@ -18,37 +17,59 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="flex items-center justify-between px-4 py-3 border-b border-neutral-800">
-      <Link href="/" className="text-xl font-bold">
-        Dave<span className="text-indigo-500">Dev</span>
-      </Link>
+    <nav className="w-full border-b border-neutral-800 px-4 py-3">
+      <div className="max-w-6xl mx-auto flex items-center justify-between">
+        {/* Logo */}
+        <Link href="/" className="text-xl font-bold">
+          Dave<span className="text-indigo-500">Dev</span>
+        </Link>
 
-      <button
-        className="md:hidden"
-        onClick={() => setOpen(!open)}
-        aria-label="Toggle Menu"
-      >
-        <span className="text-2xl">☰</span>
-      </button>
+        {/* Hamburger */}
+        <div className="flex items-center md:hidden gap-4">
+          <ThemeToggle />
+          <button
+            onClick={() => setOpen(!open)}
+            aria-label="Toggle Menu"
+            className="text-2xl"
+          >
+            ☰
+          </button>
+        </div>
 
-      <ul
-        className={`${
-          open ? 'block' : 'hidden'
-        } md:flex gap-4 text-sm font-medium md:items-center md:space-x-6`}
-      >
-        {links.map((link) => (
-          <li key={link.href}>
-            <Link
-              href={link.href}
-              className="hover:text-indigo-400 transition-colors"
-              onClick={() => setOpen(false)}
-            >
-              {link.label}
-            </Link>
-          </li>
-        ))}
-      </ul>
-      <ThemeToggle />
+        {/* Desktop Nav */}
+        <div className="hidden md:flex items-center gap-6">
+          <ul className="flex gap-4 text-sm font-medium">
+            {links.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className="hover:text-indigo-400 transition-colors"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <ThemeToggle />
+        </div>
+      </div>
+
+      {/* Mobile Nav Dropdown */}
+      {open && (
+        <ul className="md:hidden mt-4 flex flex-col gap-4 text-sm font-medium">
+          {links.map((link) => (
+            <li key={link.href}>
+              <Link
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="block px-2 py-1 hover:text-indigo-400 transition-colors"
+              >
+                {link.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
     </nav>
   );
 }
