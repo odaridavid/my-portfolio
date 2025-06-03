@@ -2,6 +2,8 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import ThemeToggle from './ThemeToggle';
+
 
 const links = [
   { href: '/', label: 'Home' },
@@ -45,6 +47,7 @@ export default function Navbar() {
           </li>
         ))}
       </ul>
+      <ThemeToggle />
     </nav>
   );
 }
