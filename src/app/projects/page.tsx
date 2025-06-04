@@ -1,7 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { FaGithub, FaGooglePlay, FaApple,FaYoutube } from "react-icons/fa";
+import {
+  FaGithub,
+  FaGooglePlay,
+  FaApple,
+  FaYoutube,
+  FaAndroid,
+} from "react-icons/fa";
 
 export default function Projects() {
   return (
@@ -72,7 +78,10 @@ export default function Projects() {
       <div className="mt-24">
         <h2 className="text-3xl font-bold mb-4 text-center">🎥 Highlights</h2>
         <p className="text-neutral-400 text-center mb-8 max-w-2xl mx-auto">
-          Here is a story I was featured in by the Android developer team some years back on my journey as a developer and how I got into Android development. It was a great experience to share my story with the community.
+          Here is a story I was featured in by the Android developer team some
+          years back on my journey as a developer and how I got into Android
+          development. It was a great experience to share my story with the
+          community.
         </p>
 
         <div className="relative overflow-hidden rounded-xl shadow-lg max-w-3xl mx-auto aspect-video">
@@ -99,6 +108,25 @@ export default function Projects() {
             YouTube
           </Link>
         </p>
+        {/* Android Weekly Feature */}
+        <div className="bg-white text-black p-6 rounded-xl shadow-md hover:shadow-lg transition">
+          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+            <FaAndroid /> Android Weekly Feature
+          </h3>
+          <p className="text-sm text-gray-700 mb-4">
+            My app quality insight video was featured in{" "}
+            <strong>Android Weekly Issue #571</strong> — a go-to resource for
+            devs in the Android ecosystem.
+          </p>
+          <Link
+            href="https://androidweekly.net/issues/issue-571"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-indigo-600 hover:underline font-medium"
+          >
+            Read Android Weekly →
+          </Link>
+        </div>
       </div>
     </section>
   );
