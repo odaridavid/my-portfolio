@@ -1,14 +1,18 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { FaYoutube, FaMedium,FaTwitch } from 'react-icons/fa';
+import Link from "next/link";
+import { FaYoutube, FaMedium, FaTwitch } from "react-icons/fa";
+import { SiHashnode, SiSpeakerdeck } from 'react-icons/si';
 
 export default function Blog() {
   return (
     <section className="max-w-5xl mx-auto mt-20 px-4">
-      <h2 className="text-4xl font-bold mb-4 text-center">Dev Content & Writing</h2>
+      <h2 className="text-4xl font-bold mb-4 text-center">
+        Dev Content & Writing
+      </h2>
       <p className="text-neutral-400 text-center mb-12 max-w-2xl mx-auto">
-        I share insights on building mobile apps, solving real-world problems with code, and documenting the chaos of being a modern dev.
+        I share insights on building mobile apps, solving real-world problems
+        with code, and documenting the chaos of being a modern dev.
       </p>
 
       <div className="grid md:grid-cols-3 gap-6">
@@ -33,7 +37,7 @@ export default function Blog() {
         {/* Hashnode */}
         <div className="bg-white text-black p-6 rounded-2xl shadow-md hover:shadow-lg transition-shadow">
           <h3 className="text-xl font-semibold mb-2 flex items-center gap-2">
-             Hashnode
+           <SiHashnode/> Hashnode
           </h3>
           <p className="text-gray-700 mb-4">
             Short-form devlogs, build notes, and weekly learning summaries.
@@ -71,7 +75,8 @@ export default function Blog() {
             <FaTwitch /> Twitch
           </h3>
           <p className="text-gray-700 mb-4">
-            Catch my live coding streams, Q&As, and debugging chaos in real-time.
+            Catch my live coding streams, Q&As, and debugging chaos in
+            real-time.
           </p>
           <Link
             href="https://twitch.tv/droidhalla"
@@ -80,6 +85,23 @@ export default function Blog() {
             className="text-indigo-600 hover:underline font-medium"
           >
             Stream on Twitch →
+          </Link>
+        </div>
+        {/* Speaker deck */}
+        <div className="bg-white text-black p-6 rounded-2xl shadow-md hover:shadow-lg transition-shadow">
+          <h3 className="text-xl font-semibold mb-2 flex items-center gap-2">
+            <SiSpeakerdeck /> Speaker deck
+          </h3>
+          <p className="text-gray-700 mb-4">
+          Talks and slide decks from conferences, meetups, and lightning sessions.
+          </p>
+          <Link
+            href="https://speakerdeck.com/davidodari"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-indigo-600 hover:underline font-medium"
+          >
+            Checkout my slides →
           </Link>
         </div>
       </div>
