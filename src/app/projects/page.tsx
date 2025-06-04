@@ -72,7 +72,7 @@ export default function Projects() {
       <div className="mt-24">
         <h2 className="text-3xl font-bold mb-4 text-center">🎥 Highlights</h2>
         <p className="text-neutral-400 text-center mb-8 max-w-2xl mx-auto">
-          Here's a story I was featured in by the Android developer team some years back on my journey as a developer and how I got into Android development. It was a great experience to share my story with the community.
+          Here is a story I was featured in by the Android developer team some years back on my journey as a developer and how I got into Android development. It was a great experience to share my story with the community.
         </p>
 
         <div className="relative overflow-hidden rounded-xl shadow-lg max-w-3xl mx-auto aspect-video">
