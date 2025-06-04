@@ -38,7 +38,7 @@ export default function Projects() {
             <FaGooglePlay /> Google Play
           </h3>
           <p className="text-gray-700 mb-4">
-            Android apps I've designed, developed, and published to the world.
+            Android apps I have designed, developed, and published to the world.
           </p>
           <Link
             href="https://play.google.com/store/apps/dev?id=8090138511631227064&hl=en"
