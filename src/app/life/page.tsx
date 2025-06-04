@@ -5,7 +5,7 @@ import Link from 'next/link';
 export default function LifePage() {
   return (
     <section className="max-w-6xl mx-auto mt-20 px-4">
-      <h2 className="text-4xl font-bold mb-4 text-center text-white">Life Outside Code</h2>
+      <h2 className="text-4xl font-bold mb-4 text-center">Life Outside Code</h2>
       <p className="text-neutral-400 text-center mb-12 max-w-2xl mx-auto">
         When I’m not debugging apps, I’m behind the decks, framing cinematic moments through a lens, or editing videos like a mad man.
       </p>
