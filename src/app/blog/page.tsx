@@ -79,7 +79,7 @@ export default function Blog() {
             rel="noopener noreferrer"
             className="text-indigo-600 hover:underline font-medium"
           >
-            Watch on Twitch →
+            Stream on Twitch →
           </Link>
         </div>
       </div>
