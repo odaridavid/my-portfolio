@@ -79,8 +79,7 @@ export default function Experience() {
     <section className="max-w-5xl mx-auto mt-20 px-4">
       <h2 className="text-4xl font-bold mb-6 text-center">Experience</h2>
       <p className="text-neutral-400 text-center mb-12 max-w-2xl mx-auto">
-        Here are some apps I’ve worked on — designed, built, or shipped to
-        production. Real users. Real impact.
+        Here are some apps I’ve worked on in prod with a significant user base.
       </p>
 
       <div className="grid md:grid-cols-2 gap-6">
