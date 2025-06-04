@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { FaYoutube, FaMedium } from 'react-icons/fa';
+import { FaYoutube, FaMedium,FaTwitch } from 'react-icons/fa';
 
 export default function Blog() {
   return (
@@ -63,6 +63,23 @@ export default function Blog() {
             className="text-indigo-600 hover:underline font-medium"
           >
             Watch on YouTube →
+          </Link>
+        </div>
+        {/* Twitch */}
+        <div className="bg-white text-black p-6 rounded-2xl shadow-md hover:shadow-lg transition-shadow">
+          <h3 className="text-xl font-semibold mb-2 flex items-center gap-2">
+            <FaTwitch /> Twitch
+          </h3>
+          <p className="text-gray-700 mb-4">
+            Catch my live coding streams, Q&As, and debugging chaos in real-time.
+          </p>
+          <Link
+            href="https://twitch.tv/droidhalla"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-indigo-600 hover:underline font-medium"
+          >
+            Watch on Twitch →
           </Link>
         </div>
       </div>
