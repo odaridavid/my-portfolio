@@ -20,7 +20,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="text-xl font-bold">
-          Dave<span className="text-indigo-500">Dev</span>
+          odari<span className="text-indigo-500">.dev</span>
         </Link>
 
         {/* Hamburger */}
