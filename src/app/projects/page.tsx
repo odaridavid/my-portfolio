@@ -1,11 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { FaGithub, FaGooglePlay, FaApple } from "react-icons/fa";
+import { FaGithub, FaGooglePlay, FaApple,FaYoutube } from "react-icons/fa";
 
 export default function Projects() {
   return (
     <section className="max-w-4xl mx-auto mt-20 px-4">
+      {/* Existing GitHub / App Store grid... */}
       <h2 className="text-4xl font-bold mb-4 text-center">Projects</h2>
       <p className="text-neutral-400 text-center mb-12 max-w-2xl mx-auto">
         Here’s where I ship stuff — apps, experiments, tools. Some are in the
@@ -65,6 +66,39 @@ export default function Projects() {
             Check App Store →
           </Link>
         </div>
+      </div>
+
+      {/* Highlights Section */}
+      <div className="mt-24">
+        <h2 className="text-3xl font-bold mb-4 text-center">🎥 Highlights</h2>
+        <p className="text-neutral-400 text-center mb-8 max-w-2xl mx-auto">
+          Here's a story I was featured in by the Android developer team some years back on my journey as a developer and how I got into Android development. It was a great experience to share my story with the community.
+        </p>
+
+        <div className="relative overflow-hidden rounded-xl shadow-lg max-w-3xl mx-auto aspect-video">
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/DZ-rEgAWFkQ"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="absolute inset-0 w-full h-full"
+          ></iframe>
+        </div>
+
+        <p className="mt-4 text-center text-sm text-neutral-500">
+          <FaYoutube className="inline mr-1" /> Watch it on{" "}
+          <Link
+            href="https://www.youtube.com/watch?v=DZ-rEgAWFkQ"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-indigo-400 hover:underline"
+          >
+            YouTube
+          </Link>
+        </p>
       </div>
     </section>
   );
