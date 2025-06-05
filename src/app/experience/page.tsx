@@ -11,11 +11,13 @@ const apps = [
       "Accommodation meta-search company with the mobile app having a user base of over 7 million.",
     tech: [
       "Kotlin",
+      "Java",
       "Jetpack Compose",
       "Firebase",
       "CircleCI",
       "GraphQL",
       "MVVM",
+      "RxJava",
       "Clean Architecture",
       "Unit Testing",
     ],
@@ -31,7 +33,7 @@ const apps = [
     role: "Software Engineer - Android",
     description:
       "Startup focusing on grocery delivery in under 10 minutes in select European countries.",
-    tech: ["Kotlin", "MVI", "BitriseCI"],
+    tech: ["Kotlin", "MVI", "BitriseCI","Unit Testing","Coroutines"],
     stores: [
       {
         label: "View on Play Store (Customer App)",
@@ -48,7 +50,7 @@ const apps = [
     role: "Software Engineer II",
     description:
       "A fintech company dealing in trading of shares, crypto, and derivatives — and recently became a bank.",
-    tech: ["Kotlin", "Github Actions", "MVI", "Screenshot Testing"],
+    tech: ["Kotlin", "Github Actions", "MVI", "Screenshot Testing","Paparazzi","Zendesk AI","RxJava"],
     stores: [
       {
         label: "View on Play Store",
@@ -60,7 +62,7 @@ const apps = [
     name: "Blacklane",
     role: "Software Engineer II",
     description: "A premium door-to-door chauffeur service.",
-    tech: ["Kotlin", "Firebase", "MVVM", "Github Actions", "Unit Testing"],
+    tech: ["Kotlin", "Firebase", "MVVM", "Github Actions", "Unit Testing","Roborazzi","Coroutines"],
     stores: [
       {
         label: "View on Play Store (Passenger App)",
