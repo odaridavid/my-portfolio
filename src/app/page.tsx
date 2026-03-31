@@ -21,9 +21,9 @@ export default function HomePage() {
         transition={{ delay: 0.3, duration: 0.6 }}
         className="text-lg md:text-xl text-neutral-400 max-w-xl mb-8"
       >
-        Software engineer for that past 7 or so years and ex-Android GDE.
+        Software engineer and lover of the arts.
         I love my code like I love my home screen — clean, minimal, and only the essentials.
-        Find me on a DJ deck or behind a camera when I am not coding.
+        Find me on a DJ deck or behind a camera when I am not coding a.k.a telling AI what to do.
       </motion.p>
 
       <motion.div

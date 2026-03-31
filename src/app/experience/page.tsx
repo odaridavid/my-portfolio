@@ -65,11 +65,11 @@ const apps = [
     tech: ["Kotlin", "Firebase", "MVVM", "Github Actions", "Unit Testing","Roborazzi","Coroutines"],
     stores: [
       {
-        label: "View on Play Store (Passenger App)",
+        label: "View on Play Store (Guest App)",
         url: "https://play.google.com/store/apps/details?id=com.blacklane.passenger&utm_source=emea_Med",
       },
       {
-        label: "View on Play Store (Driver App)",
+        label: "View on Play Store (Chauffeur App)",
         url: "https://play.google.com/store/apps/details?id=com.blacklane.chauffeurapp&utm_source=emea_Med",
       },
     ],
