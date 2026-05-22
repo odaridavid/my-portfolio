@@ -1,6 +1,16 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
+
+const gallery = [
+  { src: '/placeholders/gallery-1.svg', alt: 'Photo placeholder 01' },
+  { src: '/placeholders/gallery-2.svg', alt: 'Photo placeholder 02' },
+  { src: '/placeholders/gallery-3.svg', alt: 'Photo placeholder 03' },
+  { src: '/placeholders/gallery-4.svg', alt: 'Photo placeholder 04' },
+  { src: '/placeholders/gallery-5.svg', alt: 'Photo placeholder 05' },
+  { src: '/placeholders/gallery-6.svg', alt: 'Photo placeholder 06' },
+];
 
 export default function LifePage() {
   return (
@@ -79,6 +89,30 @@ export default function LifePage() {
               </Link>
             </li>
           </ul>
+        </div>
+      </div>
+
+      <div className="mt-20">
+        <h3 className="text-2xl font-semibold mb-2 text-center">Gallery</h3>
+        <p className="text-neutral-500 text-center mb-8 text-sm">
+          Placeholder tiles — swap in real shots from Unsplash or your library.
+        </p>
+        <div className="columns-2 md:columns-3 gap-4 [column-fill:_balance]">
+          {gallery.map((photo, i) => (
+            <div
+              key={i}
+              className="mb-4 break-inside-avoid rounded-xl overflow-hidden ring-1 ring-white/10 hover:ring-indigo-500/40 transition"
+            >
+              <Image
+                src={photo.src}
+                alt={photo.alt}
+                width={800}
+                height={1000}
+                sizes="(max-width: 768px) 50vw, 33vw"
+                className="w-full h-auto block"
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>
