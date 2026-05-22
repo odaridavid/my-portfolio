@@ -1,7 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { FaGooglePlay } from "react-icons/fa";
+
+const SHOT = "/placeholders/app-screenshot.svg";
 
 const apps = [
   {
@@ -21,6 +24,7 @@ const apps = [
       "Clean Architecture",
       "Unit Testing",
     ],
+    screenshots: [SHOT, SHOT, SHOT],
     stores: [
       {
         label: "View on Play Store",
@@ -33,7 +37,8 @@ const apps = [
     role: "Software Engineer - Android",
     description:
       "Startup focusing on grocery delivery in under 10 minutes in select European countries.",
-    tech: ["Kotlin", "MVI", "BitriseCI","Unit Testing","Coroutines"],
+    tech: ["Kotlin", "MVI", "BitriseCI", "Unit Testing", "Coroutines"],
+    screenshots: [SHOT, SHOT, SHOT],
     stores: [
       {
         label: "View on Play Store (Customer App)",
@@ -50,7 +55,8 @@ const apps = [
     role: "Software Engineer II",
     description:
       "A fintech company dealing in trading of shares, crypto, and derivatives — and recently became a bank.",
-    tech: ["Kotlin", "Github Actions", "MVI", "Screenshot Testing","Paparazzi","Zendesk AI","RxJava"],
+    tech: ["Kotlin", "Github Actions", "MVI", "Screenshot Testing", "Paparazzi", "Zendesk AI", "RxJava"],
+    screenshots: [SHOT, SHOT, SHOT],
     stores: [
       {
         label: "View on Play Store",
@@ -62,7 +68,8 @@ const apps = [
     name: "Blacklane",
     role: "Software Engineer II",
     description: "A premium door-to-door chauffeur service.",
-    tech: ["Kotlin", "Firebase", "MVVM", "Github Actions", "Unit Testing","Roborazzi","Coroutines"],
+    tech: ["Kotlin", "Firebase", "MVVM", "Github Actions", "Unit Testing", "Roborazzi", "Coroutines"],
+    screenshots: [SHOT, SHOT, SHOT],
     stores: [
       {
         label: "View on Play Store (Guest App)",
@@ -88,8 +95,25 @@ export default function Experience() {
         {apps.map((app, i) => (
           <div
             key={i}
-            className="bg-white text-black p-6 rounded-xl shadow-md hover:shadow-lg transition"
+            className="bg-white text-black p-6 rounded-xl shadow-md hover:shadow-lg transition flex flex-col"
           >
+            <div className="grid grid-cols-3 gap-2 mb-5 -mx-2">
+              {app.screenshots.map((src, idx) => (
+                <div
+                  key={idx}
+                  className="relative aspect-[9/19] rounded-xl overflow-hidden bg-neutral-900"
+                >
+                  <Image
+                    src={src}
+                    alt={`${app.name} screenshot ${idx + 1} placeholder`}
+                    fill
+                    sizes="(max-width: 768px) 30vw, 150px"
+                    className="object-cover"
+                  />
+                </div>
+              ))}
+            </div>
+
             <h3 className="text-xl font-semibold mb-1">{app.name}</h3>
             <p className="text-sm text-gray-600 mb-2 italic">{app.role}</p>
             <p className="text-gray-700 mb-4">{app.description}</p>
