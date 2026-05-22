@@ -1,4 +1,5 @@
 import './globals.css';
+import { Analytics } from '@vercel/analytics/next';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
@@ -14,6 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navbar />
         <main className="flex-grow p-4">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
